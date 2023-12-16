@@ -9,7 +9,6 @@ export PATH="/opt/homebrew/opt/php@8.0/sbin:$PATH"
 source "$HOME/.secrets"
 source "$HOME/.work_env"
 # repo stuff
-source "$HOME/.dotfiles/.work_env"
 source "$HOME/.dotfiles/.gcloud"
 source "$HOME/.dotfiles/.iterm2"
 source "$HOME/.dotfiles/.bash_alias"
