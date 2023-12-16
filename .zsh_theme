@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2034
+
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context)
+POWERLEVEL9K_CONTEXT_TEMPLATE=🤖
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
+ENABLE_CORRECTION="false"
+COMPLETION_WAITING_DOTS="true"
+HIST_STAMPS="mm/dd/yyyy"
+
+plugins=(
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  zsh-completions
+)
