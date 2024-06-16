@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 alias topmin="top -stats pid,command,cpu,mem -o mem"
 alias u="cd .."
 alias docker-clean="docker-compose down && docker container prune && docker volume prune && docker network prune"
@@ -10,8 +10,3 @@ alias vim=nvim
 alias gitlogpretty='git log --pretty=oneline --abbrev-commit'
 alias gb="git branch"
 alias gs="git status"
-#export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8.0)
-#export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
-#alias java8='export JAVA_HOME=$JAVA_8_HOME'
-#alias java11='export JAVA_HOME=$JAVA_11_HOME'
-#export JAVA_HOME=$JAVA_8_HOME
