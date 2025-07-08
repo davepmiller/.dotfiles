@@ -12,6 +12,7 @@ source "$HOME/.workrc"
 # repo stuff
 source "$HOME/.dotfiles/.bash_alias"
 source "$HOME/.dotfiles/.zsh_theme"
+source "$HOME/.dotfiles/gh_scripts"
 source "$HOME/.oh-my-zsh/oh-my-zsh.sh"
 
 eval "$(rbenv init - zsh)"

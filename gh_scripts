@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+
+# This script is used to clean up old workflow runs in GitHub Actions.
+# Run from the root of your repository.
+function cleanup_old_workflow_runs() {
+  gh run list --json databaseId,createdAt | \
+  jq -r '.[] | "\(.databaseId) \(.createdAt)"' | \
+  while read run_id created_at; do
+   run_ts=$(date -jf "%Y-%m-%dT%H:%M:%SZ" "$created_at" +%s)
+   cutoff_ts=$(date -v-1d +%s)
+   if [ "$run_ts" -lt "$cutoff_ts" ]; then
+	 echo "Deleting run $run_id from $created_at"
+	 gh run delete "$run_id"
+   fi
+  done
+}
