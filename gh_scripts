@@ -9,8 +9,8 @@ function cleanup_old_workflow_runs() {
    run_ts=$(date -jf "%Y-%m-%dT%H:%M:%SZ" "$created_at" +%s)
    cutoff_ts=$(date -v-1d +%s)
    if [ "$run_ts" -lt "$cutoff_ts" ]; then
-	 echo "Deleting run $run_id from $created_at"
-	 gh run delete "$run_id"
+     echo "Deleting run $run_id from $created_at"
+     gh run delete "$run_id"
    fi
   done
 }
